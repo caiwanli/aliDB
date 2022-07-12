@@ -52,7 +52,5 @@ func Decode(buf []byte) (*Entry, error) {
 	ks := binary.BigEndian.Uint32(buf[0:4])
 	vs := binary.BigEndian.Uint32(buf[4:8])
 	mark := binary.BigEndian.Uint16(buf[8:10])
-	key := buf[entryHeaderSize : entryHeaderSize+ks]
-	value := buf[entryHeaderSize+ks:]
-	return &Entry{KeySize: ks, ValueSize: vs, Key: key, Value: value, Mark: mark}, nil
+	return &Entry{KeySize: ks, ValueSize: vs, Mark: mark}, nil
 }
