@@ -19,7 +19,7 @@ type Entry struct {
 	Mark      uint16
 }
 
-func NewEnter(key []byte, value []byte, mark uint16) *Entry {
+func NewEntry(key []byte, value []byte, mark uint16) *Entry {
 	return &Entry{
 		KeySize:   uint32(len(key)),
 		ValueSize: uint32(len(value)),

@@ -3,7 +3,7 @@ package aliDB
 import "os"
 
 const (
-	FileName = "minidb.data"
+	FileName = "alidb.data"
 )
 
 type DBFile struct {
